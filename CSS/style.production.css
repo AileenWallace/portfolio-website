@@ -208,9 +208,9 @@ div {
   text-align: center;
 }
 
-.about-list {
+.about--list {
   list-style-type: none;
-  padding: 1;
+  padding: 10;
 }
 
 .about-list  li {
