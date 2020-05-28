@@ -9,21 +9,21 @@ visited link color: #d1d1d1
 */
 
 :root {
---primary-color: #357b70;
---secondary-color: #e0b354;
---dark-grey: #2b2b2b;
---color-active: #b8b6b6;
---color-visited: #d1d1d1;
---color-button-secondary: #29497c;
---font-family: 'Montserrat', sans-serif;
---line-height: 1.6;
---body-font-weight: 100;
---body-font-size: 16;
---heading-font-weight: 500;
---heading-font-size: 30;
---secondary-heading-font-weight: 300;
---secondary-heading-font-size: 24;
---box-shadow: none;
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --color-active: #b8b6b6;
+  --color-visited: #d1d1d1;
+  --color-button-secondary: #29497c;
+  --font-family: 'Montserrat', sans-serif;
+  --line-height: 1.6;
+  --body-font-weight: 100;
+  --body-font-size: 16;
+  --heading-font-weight: 500;
+  --heading-font-size: 30;
+  --secondary-heading-font-weight: 300;
+  --secondary-heading-font-size: 24;
+  --box-shadow: none;
 }
 
 * {
@@ -32,17 +32,17 @@ visited link color: #d1d1d1
 
 body {
   background-color: white;
-  font-family: var(--font-family)
-  font-weight var(--body-font-weight);
+  font-family: var(--font-family);
+  font-weight: var(--body-font-weight);
   font-size: 16;
   /*sets the font size to 16 px*/
   line-height: 1.6;
-  /*sets the font size 16 px*/
 }
 
 h1 {
   font-size: var(--heading-font-size);
   font-weight: var(--heading-font-weight);
+  font-size: 22;
 }
 
 h2 {
@@ -84,7 +84,7 @@ a:active {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   transition-duration: 0.4s;
   transition-property: opacity;
-  }
+}
 
 .button, button, button_secondary {
   &:hover {
@@ -269,43 +269,40 @@ div {
 @media all and (min-width: 500px) and (max-width: 1500px) {
 }
 
+.grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media all and (max--width: 1500px){
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid--gap: 10px;
   }
 
-  @media all and (max--width: 1500px){
-    .grid {
-      grid--gap: 10px;
-    }
-
-    .grid__item: last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-    h1 {
-      font-size: 22px;
-    }
+  .grid__item: last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
   }
+}
 
-  @keyframes color--change {
-    0% {
-      fill: #edc655;
-    }
-    50% {
-      fill: #fcffad;
-    }
-    100% {
-      fill: #f76414;
-    }
+@keyframes color--change {
+  0% {
+    fill: #edc655;
   }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
 .sun {
   animation-duration: 4s;
   animation-name: color--change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-  }
-  /* .sun { animation: 4s color-change infinite alternate linear;
+}
+/* .sun { animation: 4s color-change infinite alternate linear;
 }
 */
 @keyframes cloud-move {
