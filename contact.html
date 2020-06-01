@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="/static/favicon/wikipedia.ico"> </link>
-  <link href="/static/favicon/wikipedia.ico"> </link>
+  <head lang="en">
+    <meta charset="utf-8">
+    <a href="/static/favicon/wikipedia.ico">
+      <title>Contact</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100&display=swap" rel="stylesheet">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+      <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+      <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
+      <meta name="viewport" content="width=device--width, initial--scale= 1">
+    </head>
 
-  <link rel="stylesheet" type="text/css" href="CSS/style.production.css"></link>
+    <header>
+      <!---add logo here -->
+      <img width="200px" src="img/AWprocesslogo.svg" alt="logo"
+        class="page--header__item">
+      <nav class="main--navigation page--header__item">
+        <ul role="menubar" class="navigation--list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation--list__item
+              navigation--list__item--active">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation--list__item">About</a>
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation--list__item
+              navigation--list__item--active">Work</a>
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem"
+              class="navigation--list__item">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <body>
+      <div>
+        <h1>Contact Me</h1><br>
+        <img width="300px" class="map" src="IMG/manhattan.svg" alt="blue map of
+          manhattan" />
+      </div>
+      <div>
+        Telephone: <a href="tel: +12676210211">+1 267 614 0211 </a>
+        <br>
+        Email: <a href="mailto:ailwallac@gmail.com">ailwallac(at)gmail(dot)com</a>
+        <br>
+        Located in <em>New York City</em>
+        <br>
+        <a href="mailto:ailwallac@gmail.com">Contact me</a>
+      </div>
+      <br>
+      <br>
+      <div>
+        <b>Add me to <i>Newsletter</i></b>
+        <br>
+        <form action="" method="post" id="contact-form">
+          <label for="email" class="standard-label">Email:</label>
+          <input type="email" pattern="{@}" id="email" name="user_email">
+          <br>
+          <label for="telephone" class="standard-label">Telephone:</label>
+          <input type="tel" pattern="\d{3}[\-.]\d{3}[\-.]\d{4}" id="telephone">
+          <br>
+          <label for="message" class="standard-label">Message: </label>
+          <textarea maxlength="240" required></textarea>
+          <br>
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
 
-    <meta name="viewport" content="width=device--width, initial--scale= 1"
-<title> | CONTACT | </title>
-</head>
+      <footer class="page--footer">
+        <p>Find me on</p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/aileen-wallace-2016"><img
+              src="IMG/linkedinlogo.svg"
+              alt="LinkedIn" height= 20px></a>
+          <a href="https://github.com/AileenWallace/portfolio-website"><img
+              src="IMG/githublogo.svg"
+              alt="GitHub" height= 20px></a>
+          <a href="https://www.instagram.com/aileenwallace/"><img
+              src="IMG/instagramicon.svg"
+              alt="Instagram" height= 30px></a>
+        </div>
+      </footer>
 
-<header class: "page--header">
-  <!---add logo here -->
-  <img width="200px" src="img/AWprocesslogo.svg" alt= "logo" class= "page--header__item">
-  <nav class="main--navigation page--header__item">
-    <ul role="menubar" class="navigation--list">
-      <li role="presentation">
-        <a href="index.html" role="menuitem" class="navigation--list__item navigation--list__item--active">Home</a>
-      </li>
-      <li role="presentation">
-        <a href="about.html" role="menuitem" class="navigation--list__item">About</a>
-      </li>
-      <li role="presentation">
-        <a href="work.html" role="menuitem" class="navigation--list__item navigation--list__item--active">Work</a>
-      </li>
-      <li role="presentation">
-        <a href="contact.html" role="menuitem" class="navigation--list__item">Contact</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<body>
-  <div>
-    <h1>Contact Me</h1>
-    <br>
-    Telephone: <a href="tel: +12676210211">+1 267 614 0211 </a>
-    <br>
-    Email: <a href="mailto:ailwallac@gmail.com" >ailwallac(at)gmail(dot)com</a>
-    <br>
-    Located in <em>New York City</em>
-    <br>
-    <a href="mailto:ailwallac@gmail.com">Contact me</a>
-  </div>
-  <br>
-  <br>
-  <div>
-  <b>Add me to <i>Newsletter</i></b>
-  <br>
-  <form action="" method="post" id="contact-form">
-    <label for="email" class="standard-label">Email:</label>
-    <input type="email" pattern="{@}" id="email" name="user_email">
-    <br>
-    <label for="telephone" class="standard-label">Telephone:</label>
-    <input type="tel" pattern="\d{3}[\-.]\d{3}[\-.]\d{4}" id="telephone">
-    <br>
-    <label for="message" class="standard-label">Message: </label>
-    <textarea maxlength "240" required></textarea>
-    <br>
-    <input type= "submit" value="Send Message">
-  </form>
-</div>
+      <script src="js/tota11y.min.js"></script>
+    </body>
 
-  <footer class="page--footer">
-    <p>Find me on</p>
-    <div class="social-media">
-      <a href="https://www.linkedin.com/in/aileen-wallace-2016"><img src="/Users/aileenwallace/Desktop/portfolio%20website/IMG/linkedinlogo.svg" alt="LinkedIn" height= 20px></a>
-      <a href="https://github.com/AileenWallace/portfolio-website"><img src="/Users/aileenwallace/Desktop/portfolio%20website/IMG/githublogo.svg" alt="GitHub"height= 20px></a>
-      <a href="https://www.instagram.com/aileenwallace/"><img src="/Users/aileenwallace/Desktop/portfolio%20website/IMG/instagramicon.svg" alt="Instagram"height= 30px></a>
-    </div>
-  </footer>
-
-  <script src="js/tota11y.min.js"></script>
-</body>
-
-</html>
+  </html>
