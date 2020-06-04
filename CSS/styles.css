@@ -15,7 +15,7 @@ visited link color: #d1d1d1
   --color-active: #b8b6b6;
   --color-visited: #d1d1d1;
   --color-button-secondary: #29497c;
-  --font-family: 'Montserrat', sans-serif;
+  --font-family: "Montserrat", sans-serif;
   --line-height: 1.6;
   --body-font-weight: 100;
   --body-font-size: 16;
@@ -52,7 +52,7 @@ h2 {
 
 h3 {
   font-size: var(--secondary-heading-font-size);
-  font-weight: var(----secondary-heading-font-weight);
+  font-weight: var(---secondary-heading-font-weight);
 }
 
 a {
@@ -64,10 +64,12 @@ a:visited {
   color: var(--color-visited);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over link */
   text-decoration: none;
 }
+
 a:active {
   /* selected link */
   color: var(--color-visited);
@@ -86,13 +88,7 @@ a:active {
   transition-property: opacity;
 }
 
-.button, button, button_secondary {
-  &:hover {
-    border-bottom: var(--box-shadow);
-  }
-}
-
-.button{
+.button {
   @extend %button-shared;
   background-color: var(--color-active);
 }
@@ -102,7 +98,9 @@ a:active {
   background-color: var(--color-button-secondary);
 }
 
-button, .button, button_secondary {
+button,
+.button,
+button_secondary {
   /*overwrites browser defaults and resets border */
   border: none;
   /*added for CV button*/
@@ -122,35 +120,39 @@ button, .button, button_secondary {
   transition-property: opacity;
 }
 
-button: hover, button: focus,
-.button: hover, .button: focus,
-.button_secondary: hover, .button_secondary: focus {
+button: hover, button: focus, .button: hover, .button: focus, .button_secondary: hover, .button_secondary: focus {
   cursor: pointer;
   opacity: 0.5;
 }
 
+.about_content {
+  padding: 100px;
+}
+
 .profile__portrait {
-  padding: 30px;
+  padding: 40px;
   float: left;
   width: 250px;
-  margin--right: 400px;
+  margin-right: 400px;
   border-radius: 50%;
 }
 
 .flex--container {
-  display:flex;
-  background-color: rgba(100, 100, 150, 0.5)
+  display: flex;
+  background-color: rgba(100, 100, 150, 0.5);
 }
+
 .flex-item {
   background-color: rgba(100, 100, 150, 1);
   height: 75px;
-  margin:10px;
+  margin: 10px;
   text-align: center;
   color: white;
   line-height: 75px;
   flex-basis: 200px;
   flex-grow: 1;
 }
+
 .page--footer {
   clear: both;
   display: flex;
@@ -166,7 +168,7 @@ div {
 }
 
 * {
-  box--sizing: border--box;
+  box-sizing: border--box;
 }
 
 .page--header {
@@ -188,10 +190,9 @@ div {
   list-style-type: none;
 }
 
-.navigation--list  li {
+.navigation--list li {
   display: inline;
   margin-right: 15px;
-  float: right;
 }
 
 .about {
@@ -206,7 +207,7 @@ div {
   padding: 1;
 }
 
-.about-list  li {
+.about-list li {
   float: center;
 }
 
@@ -216,7 +217,6 @@ div {
   /*grid-template-row: 300px 300px; */
   grid-gap: 20px;
 }
-
 
 .grid__item {
   background-color: var(--color-active);
@@ -233,20 +233,22 @@ div {
 }
 
 /* Grid fallback*/
+
 .grid__item {
   display: inline--block;
   width: 33%;
 }
 
 /*Styling CSS grid*/
+
 .grid {
   display: grid;
-  grid--template--columns: 1fr 1fr 1fr;
-  grid--gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
 .grid__item {
-  background--color: LightGrey;
+  background-color: LightGrey;
   padding: 10px;
   width: auto;
 }
@@ -273,11 +275,10 @@ div {
   grid-template-columns: 1fr 1fr;
 }
 
-@media all and (max--width: 1500px){
+@media all and (max--width: 1500px) {
   .grid {
-    grid--gap: 10px;
+    grid-gap: 10px;
   }
-
   .grid__item: last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
@@ -295,6 +296,7 @@ div {
     fill: #f76414;
   }
 }
+
 .sun {
   animation-duration: 4s;
   animation-name: color--change;
@@ -302,9 +304,11 @@ div {
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 /* .sun { animation: 4s color-change infinite alternate linear;
 }
 */
+
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);
@@ -313,12 +317,14 @@ div {
     transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   animation-duration: 30s;
   animation-name: cloud-move;
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 /*  .cloud-front {
 animation 30s cloud-move alternate linear;
 }*/
@@ -331,6 +337,7 @@ animation 30s cloud-move alternate linear;
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
